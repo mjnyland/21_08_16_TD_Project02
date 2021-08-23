@@ -1,0 +1,318 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color:rgb(0, 0, 0)
+}
+
+body {
+    background-color: rgb(248, 248, 248);
+    margin: 0;
+}
+
+img {
+    width: 90%;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+.nav{
+    display: block;
+    padding-top: 1em;
+    margin-top: 1em;
+}
+
+.nav-items {
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 25pt;
+    font-family: 'Lobster', cursive;
+    color:indianred;
+}
+
+.nav-items li {
+    background-color: white;
+    margin: 0 2em .5em 2em;
+    padding: 1em;
+    text-align: center;
+    font-size: 12pt;
+    font-weight: 700;
+}
+
+
+
+
+/* ---- Layout Containers ---- */
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 3em auto;
+}
+
+main {
+    background-color: white;
+}
+
+.footer-content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+
+
+/* ---- Page Elements ---- */
+
+.profile-pic{
+    width: 70%;
+    align-self: center; 
+    margin: 0 0 2em 0em;
+}
+
+.profile p {
+    font-size: 15pt;
+}
+
+p {
+    text-align: center;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 12pt;
+    font-weight: 700;
+    margin: 1em 0 .2em 0;
+}
+
+h3 {
+    padding: 3em;
+    margin: 0;
+    font-size: 10pt;
+}
+
+.item{
+    padding-bottom: 2.5em;
+}
+
+.item p {
+    width: 90%;
+}
+
+
+
+/* ---- About ---- */
+
+.about p {
+    margin-bottom: 2em;
+    width: 90%;
+}
+
+.about-images {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-images img {
+    margin: 0 auto;
+    padding-bottom: 1em;
+}
+
+
+
+/* ---- Footer ---- */
+
+.footer-content p{
+    margin-bottom: 2em;
+}
+
+.bottom-links {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+.bottom-links p {
+    margin: 0 0 2em 0;
+}
+
+hr {
+    margin-top: 3em;
+    border: .2px solid rgb(232, 232, 232);
+}
+
+em {
+    font-weight: 700;
+    font-style: normal;
+}
+
+.footer-nav-items {
+    display: none;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 768px) {
+        /* ---- Navigation ---- */
+    .nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        margin-bottom: 0;
+    }
+
+    .nav-items {
+        display: flex;
+        justify-content: center;
+        margin-top: .5em;
+    }
+
+    .nav-items li {
+        background-color: rgb(248, 248, 248);
+    }
+
+    /* ---- Profile ---- */
+
+    .profile {
+        flex-direction: row;
+    }
+
+    .profile-pic {
+        order: 1;
+        width: 40%;
+        margin-left: 2em;
+    }
+
+    .profile p {
+        text-align: left;
+        flex-grow: 3;
+    }
+
+    /* ---- Items ---- */
+    .items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+        }
+
+    .item {
+        width: 49%;
+    }
+
+    .item img {
+        width: 100%;
+    }
+
+    p {
+        width: 80%;
+        padding: .5em;
+    }
+
+    /* ---- About ---- */
+
+    .about-images {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 3em;
+    }
+
+    .about-images img {
+        width: 50%;
+        padding: 1em;
+    }
+
+
+    /* ---- Footer ---- */
+
+    .bottom-links {
+        flex-direction: row;
+        align-content: center;
+    }
+    .back-to-top {
+        display: none;
+    }
+
+    .footer-nav-items {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .bottom-links p {
+        text-align: left;
+        padding: .5em .5em .5em 0;
+        font-family: 'Lobster', cursive;
+        color:indianred;
+    }
+
+    .footer-nav-items li {
+        padding: .5em 0 .5em 2em;
+    }
+
+   
+
+}
+
+@media (min-width: 1024px) {
+
+    /* ---- Navigation ---- */
+
+   .nav {
+       flex-direction: row;
+       align-items: center;
+       width: 90%;
+       margin: 0 auto;
+   }
+
+   h1 {
+       flex-grow: 5;
+       margin: 0;
+       width: 40%;
+       text-align: left;
+       padding-left: .25em;
+   }
+
+   .nav-items {
+       justify-content: flex-end;
+   }
+
+   .nav-items li {
+       padding: 1em 0em 1em 2em;
+       margin: 0;
+   }
+
+   /* ---- Items ---- */
+
+   .item {
+       width: 32.5%;
+   }
+
+   /* ---- Page Elements ---- */
+
+  
+}
